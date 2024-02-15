@@ -1,1 +1,1 @@
-# css-designs-collection
+This repository contains snippets of my css designs

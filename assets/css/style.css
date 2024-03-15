@@ -5,7 +5,7 @@
 ========== */
 
 :root {
-  --dark-blue: rgb(7, 7, 54);
+  --dark-blue: rgb(4, 4, 32);
 }
 
 *,
@@ -26,8 +26,15 @@ body {
     sans-serif;
 }
 
+main{
+  scroll-snap-type: y mandatory;
+  /* overflow-y: scroll;
+  height: 100vh; */
+}
+
 section {
   height: calc(100vh + 100px);
+  scroll-snap-align: start;
 }
 
 /* ==========
@@ -134,9 +141,56 @@ nav a:hover::before {
 ========== */
 
 #section--home{
-  background-color: gray;
+  background-color: violet;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.text-container-hero{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3rem;
+  padding: 0 3rem;
+  height: calc(100vh+100px);
+}
+
+.hero-title{
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1.5px;
+  padding: 10px 0;
+}
+
+.hero-subtext{
+  padding: 10px 0;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.hero-title span{
+  color: rgb(255, 0, 166);
+}
+
+.hero-text button{
+  margin-top: 20px;
+  padding: 20px 60px;
+  background: transparent;
+  color: white;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.hero-image{
+  height: calc(100vh + 100px);
 }
 
 /* ==========
@@ -145,13 +199,113 @@ nav a:hover::before {
 
 #section--about-us{
   background-color: red;
+  height: calc(100vh + 100px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#story-container{
+  margin: 0 3rem;
+  padding: 0 3rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-text{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: .5fr .5fr 1fr;
+}
+
+.story-title{
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.story-text span{
+  color:  hsl(0 0% 100% / 0.2);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  background-image: linear-gradient(90deg, white, white);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+
+.story-text h2 span{
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 30vh;
+}
+
+.story-text p span{
+  font-size: 1.2rem;
+  line-height: 30px;
+  animation-range-start: cover 22.5vh;
+  animation-range-end: cover 50vh;
+}
+
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos{
+  overflow: hidden;
+  padding: 60px 0;
+  background: var(--dark-blue);
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--dark-blue));
+  content: "";
+  z-index: 2;
+}
+
+.logos::after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--dark-blue));
+  content: "";
+  z-index: 2;
+}
+
+.logos:hover .logos-slide{
+  animation-play-state: paused;
+}
+
+.logos-slide{
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide svg {
+  height: 50px;
+  margin: 0 40px;
+  color: white;
 }
 
 /* ==========
- How it Works Section
+ Featured Section
 ========== */
 
-#section--how-it-works{
+#section--featured{
   background-color: orange;
 }
 
@@ -169,6 +323,16 @@ nav a:hover::before {
 
 #section--blog{
   background-color: green;
+}
+
+/* ==========
+ Keyframes Section
+========== */
+
+@keyframes scroll-reveal  {
+  to {
+    background-size: 100% 100%;
+  }
 }
 
 /* ==========

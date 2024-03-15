@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -26,7 +26,7 @@ body {
     sans-serif;
 }
 
-main{
+main {
   scroll-snap-type: y mandatory;
   /* overflow-y: scroll;
   height: 100vh; */
@@ -49,7 +49,11 @@ section {
 }
 
 header {
-  background: linear-gradient(135deg, rgba(79, 11, 139, 0.2), rgba(20, 3, 25, 0.5));
+  background: linear-gradient(
+    135deg,
+    rgba(79, 11, 139, 0.2),
+    rgba(20, 3, 25, 0.5)
+  );
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -140,13 +144,13 @@ nav a:hover::before {
  Home Section
 ========== */
 
-#section--home{
+#section--home {
   background-color: violet;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.text-container-hero{
+.text-container-hero {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -155,7 +159,7 @@ nav a:hover::before {
   height: calc(100vh+100px);
 }
 
-.hero-title{
+.hero-title {
   font-size: 4rem;
   font-weight: 800;
   color: white;
@@ -163,7 +167,7 @@ nav a:hover::before {
   padding: 10px 0;
 }
 
-.hero-subtext{
+.hero-subtext {
   padding: 10px 0;
   color: white;
   font-size: 1.2rem;
@@ -172,11 +176,11 @@ nav a:hover::before {
   font-weight: 300;
 }
 
-.hero-title span{
+.hero-title span {
   color: rgb(255, 0, 166);
 }
 
-.hero-text button{
+.hero-text button {
   margin-top: 20px;
   padding: 20px 60px;
   background: transparent;
@@ -188,8 +192,7 @@ nav a:hover::before {
   cursor: pointer;
 }
 
-
-.hero-image{
+.hero-image {
   height: calc(100vh + 100px);
 }
 
@@ -197,14 +200,14 @@ nav a:hover::before {
  About Us Section
 ========== */
 
-#section--about-us{
+#section--about-us {
   background-color: red;
   height: calc(100vh + 100px);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-#story-container{
+#story-container {
   margin: 0 3rem;
   padding: 0 3rem;
   display: grid;
@@ -212,21 +215,21 @@ nav a:hover::before {
   align-items: center;
 }
 
-.story-text{
+.story-text {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-rows: .5fr .5fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr;
 }
 
-.story-title{
+.story-title {
   font-size: 3rem;
   font-weight: 700;
   padding: 10px 0;
 }
 
-.story-text span{
-  color:  hsl(0 0% 100% / 0.2);
+.story-text span {
+  color: hsl(0 0% 100% / 0.2);
   background-clip: text;
   background-repeat: no-repeat;
   background-size: 0 100%;
@@ -235,19 +238,19 @@ nav a:hover::before {
   animation-timeline: view();
 }
 
-.story-text h2 span{
+.story-text h2 span {
   animation-range-start: cover 20vh;
   animation-range-end: cover 30vh;
 }
 
-.story-text p span{
+.story-text p span {
   font-size: 1.2rem;
   line-height: 30px;
   animation-range-start: cover 22.5vh;
   animation-range-end: cover 50vh;
 }
 
-.logos{
+.logos {
   overflow: hidden;
   padding: 60px 0;
   background: var(--dark-blue);
@@ -255,33 +258,41 @@ nav a:hover::before {
   position: relative;
 }
 
-.logos:before{
+.logos:before {
   position: absolute;
   top: 0;
   left: 0;
   width: 250px;
   height: 100%;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--dark-blue));
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    var(--dark-blue)
+  );
   content: "";
   z-index: 2;
 }
 
-.logos:after{
+.logos:after {
   position: absolute;
   top: 0;
   right: 0;
   width: 150px;
   height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--dark-blue));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--dark-blue)
+  );
   content: "";
   z-index: 2;
 }
 
-.logos:hover .logos-slide{
+.logos:hover .logos-slide {
   animation-play-state: paused;
 }
 
-.logos-slide{
+.logos-slide {
   display: inline-block;
   animation: 35s slide infinite linear;
 }
@@ -296,7 +307,7 @@ nav a:hover::before {
  Featured Section
 ========== */
 
-#section--featured{
+#section--featured {
   position: relative;
   overflow: hidden;
   display: grid;
@@ -326,7 +337,7 @@ nav a:hover::before {
   z-index: 2;
 } */
 
-.video-bg{
+.video-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -335,7 +346,7 @@ nav a:hover::before {
   z-index: -1;
 }
 
-#featured-container-text{
+#featured-container-text {
   margin: 0 3rem;
   padding: 0 3rem;
   display: grid;
@@ -343,14 +354,14 @@ nav a:hover::before {
   align-items: center;
 }
 
-.featured-text{
+.featured-text {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-rows: repeat(3, .5fr);
+  grid-template-rows: repeat(3, 0.5fr);
 }
 
-.featured-title{
+.featured-title {
   font-size: 4.5rem;
   font-weight: 700;
   padding: 10px 0;
@@ -358,7 +369,7 @@ nav a:hover::before {
   z-index: 3;
 }
 
-.featured-subtext{
+.featured-subtext {
   font-size: 1rem;
   color: white;
   line-height: 25px;
@@ -367,13 +378,13 @@ nav a:hover::before {
   z-index: 3;
 }
 
-.hottest{
+.hottest {
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(45deg, rgb(255, 196, 0), rgb(255, 119, 0));
 }
 
-.view-collections{
+.view-collections {
   margin-top: 20px;
   padding: 20px 60px;
   background: transparent;
@@ -387,42 +398,291 @@ nav a:hover::before {
   width: 320px;
 }
 
-.view-collections:hover{
+.view-collections:hover {
   border: 2px solid rgb(255, 153, 0);
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 /* ==========
  NFT-Collections Section
 ========== */
-#section--nft-collections{
+
+#section--nft-collections {
   background-color: rgb(119, 0, 255);
+  overflow: scroll;
 }
 
+.nft-card-container{
+  margin: 0 3rem;
+  padding: 6rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px 15px;
+}
 
+.nft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  border: 1px solid #fff 22;
+  background-color: #282c34;
+  background: linear-gradient(
+    0deg,
+    rgba(40, 44, 52, 1) 0%,
+    rgba(17, 0, 32, 0.5) 100%
+  );
+  box-shadow: 0 7px 20px 5px #000 88;
+  border-radius: 0.7rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: 0.5s all;
+}
+
+.nft .seller{
+  color: rgb(154, 154, 154);
+}
+
+.nft .seller span{
+  color: white;
+}
+
+.nft h2{
+  color: white;
+}
+
+.nft hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #88888855;
+  margin-top: 0;
+}
+.nft ins {
+  text-decoration: none;
+}
+
+.nft .main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem;
+}
+
+.nft .main .tokenImage {
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.nft .main .description {
+  margin: 0.5rem 0;
+  color: #a89ec9;
+}
+
+.nft .main .tokenInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nft .main .tokenInfo .price {
+  display: flex;
+  align-items: center;
+  color: #ee83e5;
+  font-weight: 700;
+}
+
+.nft .main .tokenInfo .price ins {
+  margin-left: -0.3rem;
+  margin-right: 0.5rem;
+}
+
+.nft .main .tokenInfo .duration {
+  display: flex;
+  align-items: center;
+  color: #a89ec9;
+  margin-right: 0.2rem;
+}
+
+.nft .main .tokenInfo .duration ins {
+  margin: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.nft .main .creator {
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+  margin-bottom: -0.3rem;
+}
+
+.nft .main .creator ins {
+  color: #a89ec9;
+  text-decoration: none;
+}
+
+.nft .main .creator .wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff 22;
+  padding: 0.3rem;
+  margin: 0;
+  margin-right: 0.5rem;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 4px #000 aa;
+}
+
+.nft .main .creator .wrapper img {
+  border-radius: 100%;
+  border: 1px solid #fff 22;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  margin: 0;
+}
+
+.nft::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px white;
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+
+.nft:hover {
+  border: 1px solid black;
+  box-shadow: 0 7px 50px 10px;
+  transform: scale(1.015);
+  filter: brightness(1.3);
+}
+
+.nft:hover ::before {
+  filter: brightness(0.5);
+  top: -100%;
+  left: 200%;
+}
+.bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg h1 {
+  font-size: 20rem;
+  filter: opacity(0.5);
+}
 
 /* ==========
- Blog Section
+ Market Section
 ========== */
 
-#section--blog{
-  background-color: green;
+#section--market {
+  background-color: rgb(124, 170, 124);
+  height: calc(100vh + 100px);
+  overflow: hidden;
+}
+
+#category-container{
+  margin: 0 3rem;
+  padding: 6rem 3rem;
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(4, 3fr);
+}
+
+.category-1{
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+}
+
+.category-title{
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  display: grid;
+  align-self: center;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 300px));
+  grid-gap: 10px;
+}
+
+.card{
+  width: px;
+  height: 300px;
+  background-color: rgb(30, 30, 30);
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.card-image img{
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+
+.card-text{
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+}
+
+.price-container{
+  padding: 10px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.title{
+  padding: 5px 10px;
+  display: grid;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.price-info,
+.price-value{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.floor,
+.volume{
+  font-size: 0.825rem;
+  color: gray;
+}
+
+.eth-value,
+.volume-value{
+  font-weight: 600;
+  color: white;
+  size: 1.2rem;
 }
 
 /* ==========
  Keyframes Section
 ========== */
 
-@keyframes scroll-reveal  {
+@keyframes scroll-reveal {
   to {
     background-size: 100% 100%;
   }
 }
 
-@keyframes slide{
-  from{
+@keyframes slide {
+  from {
     transform: translateX(0);
   }
   to {
@@ -466,7 +726,11 @@ nav a:hover::before {
     top: 100%;
     left: 0;
     width: 99.8%;
-    background: linear-gradient(135deg, rgba(79, 11, 139, 0.2), rgba(20, 3, 25, 0.8));
+    background: linear-gradient(
+      135deg,
+      rgba(79, 11, 139, 0.2),
+      rgba(20, 3, 25, 0.8)
+    );
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(251, 121, 244, 0.1);
@@ -478,7 +742,7 @@ nav a:hover::before {
     grid-column: 1/3;
   }
 
-  nav ul{
+  nav ul {
     display: flex;
     flex-direction: column;
   }

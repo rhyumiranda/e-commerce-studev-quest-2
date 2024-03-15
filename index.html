@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Vault</title>
+    <script
+      type="module"
+      defer
+      src="https://unpkg.com/@splinetool/viewer@1.0.66/build/spline-viewer.js"
+    ></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/e4a1219774.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">PixVault</h1>
+      <input type="checkbox" class="nav-toggle" id="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="#section--home">Home</a></li>
+          <li><a href="#section--about-us">About us</a></li>
+          <li><a href="#section--how-it-works">How It Works</a></li>
+          <li><a href="#section--nft-collections">NFT</a></li>
+          <li><a href="#section--blog">Explore</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <!-- <main> -->
+      <section id="section--home">
+        <div class="hero-text">
+          <div class="hero-title">Discover Endless Digital Treasures on PixVault</div>
+          <div class="hero-subtext"></div>
+          <button></button>
+        </div>
+        <div class="hero-image">
+          <div class="hero-text"></div>
+          <div class="hero-image">
+            <!-- <spline-viewer
+              url="https://prod.spline.design/KCZ2zVzajbQhgVVl/scene.splinecode">
+            </spline-viewer> -->
+          </div>
+        </div>
+      </section>
+      <section id="section--about-us"></section>
+      <section id="section--how-it-works"></section>
+      <section id="section--nft-collections"></section>
+      <section id="section--blog"></section>
+    <!-- </main> -->
+    <footer></footer>
+  </body>
 </html>

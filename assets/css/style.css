@@ -445,6 +445,7 @@ nav a:hover::before {
   -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
   transition: 0.5s all;
+  cursor: pointer;
 }
 
 .nft .seller {
@@ -621,6 +622,8 @@ nav a:hover::before {
 
 .card-container {
   display: grid;
+  justify-content: center;
+  align-content: center;
   grid-template-columns: repeat(auto-fill, minmax(285px, 300px));
   grid-gap: 10px;
 }
@@ -819,6 +822,12 @@ footer li i {
  Media Query Section
 ========== */
 
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
 @media (max-width: 1150px) {
   .nav-toggle-label span,
   .nav-toggle-label span::before,
@@ -913,4 +922,12 @@ footer li i {
     align-items: center;
     grid-area: 1 / 2 / 2 / 3;
   }
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
 }
